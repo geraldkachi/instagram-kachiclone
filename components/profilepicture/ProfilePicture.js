@@ -2,11 +2,11 @@ import React from "react";
 import { StyleSheet, Image, View } from "react-native";
 
 const ProfilePicture = ({ data }) => {
-  const { name, ImageUri } = data;
+  const { ImageUri } = data;
 
   return (
     <View style={styles.container}>
-      <Image style={styles.image} source={ImageUri} name={name} />
+      <Image style={styles.image} source={ImageUri} />
     </View>
   );
 };

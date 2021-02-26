@@ -7,6 +7,7 @@ const Story = ({data}) => {
     return (
         <View>
             <ProfilePicture data={data} />
+            <Text>{data.name}</Text>
         </View>
     )
 }

@@ -5,7 +5,7 @@ import datas from "../../data/storedata"
 
 const Stories = () => {
     return (
-        <View>
+        <View style={{flex: 1, overflow: 'hidden'}}>
             <FlatList 
             data={datas}
             renderItem={({item}) => <Story data={item} />}
