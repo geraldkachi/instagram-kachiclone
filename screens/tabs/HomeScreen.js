@@ -1,11 +1,14 @@
 import React from "react";
-import { Image, StyleSheet, Text, View } from "react-native";
-import Stories from "../../components/story/Stories"
+import { StyleSheet, View } from "react-native";
+import Feed from "../../components/feed/Feed";
+// import Stories from "../../components/story/Stories";
+
 
 const Home = () => {
   return (
     <View style={styles.container}>
-      <Stories />
+      <Feed />
+      {/* <Stories /> */}
     </View>
   );
 };

@@ -1,17 +1,24 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
-import ProfilePicture from "../profilepicture/ProfilePicture"
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
+import ProfilePicture from "../profilepicture/ProfilePicture";
 // import data from "../../data/storedata"
 
-const Story = ({data}) => {
-    return (
-        <View>
-            <ProfilePicture data={data} />
-            <Text>{data.name}</Text>
-        </View>
-    )
-}
+const Story = ({ imageUri, name  }) => {
 
-export default Story
+  return (
+    <View>
+      <ProfilePicture uri={imageUri} />
+      <Text style={styles.name}>{name}</Text>
+    </View>
+  );
+};
 
-const styles = StyleSheet.create({})
+export default Story;
+
+const styles = StyleSheet.create({
+  name: {
+    textAlign: "center",
+  },
+});
+
+// react native video

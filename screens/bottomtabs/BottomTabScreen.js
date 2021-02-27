@@ -2,15 +2,17 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
+ProfilePicture
 
 import {
   Entypo,
   Ionicons,
+  Foundation,
   SimpleLineIcons,
   MaterialIcons,
   Octicons,
-  // AntDesign,
-  // MaterialCommunityIcons,
+  AntDesign,
+  MaterialCommunityIcons,
 } from "@expo/vector-icons";
 
 import HomeScreen from "../tabs/HomeScreen";
@@ -18,6 +20,7 @@ import SearchScreen from "../tabs/SearchScreen";
 import ActivityScreen from "../tabs/ActivityScreen";
 import ReelsScreen from "../tabs/ReelsScreen";
 import ProfileScreen from "../tabs/ProfileScreen";
+import ProfilePicture from "../../components/profilepicture/ProfilePicture";
 
 const Tab = createBottomTabNavigator();
 
@@ -27,28 +30,29 @@ const BottomTabScreen = () => (
       name="HomeStack"
       component={HomeStackNavigation}
       options={{
-        tabBarLabel: "Home",
+        // tabBarLabel: "Home",
         // tabBarColor: "blue",
-        tabBarIcon: () => <Octicons name="home" size={24} color="blue" />,
+        tabBarIcon: () => <Foundation name="home" size={24} color="black" />,
       }}
     />
     <Tab.Screen
       name="SearchStack"
       component={SearchStackNavigation}
       options={{
-        tabBarLabel: "Home",
-        tabBarColor: "blue",
-        tabBarIcon: () => <Octicons name="search" size={22} color="blue" />,
+        // tabBarLabel: "Home",
+        // tabBarColor: "blue",
+        tabBarIcon: () => <Ionicons name="search" size={24} color="black" />,
       }}
     />
     <Tab.Screen
       name="ReelsStack"
       component={ReelsStackNavigation}
       options={{
-        tabBarLabel: "Notification",
-        tabBarColor: "blue",
+        tabBarLabel: 'none',
+        // tabBarColor: "blue",
         tabBarIcon: () => (
-          <MaterialIcons name="notifications-none" size={28} color="blue" />
+          <MaterialCommunityIcons name="plus-box-outline" size={28} color="black" />
+          // <MaterialCommunityIcons name="plus-box-outline" size={28} color="black" />
           // <Ionicons name="ios-notifications-outline" size={24} color="blue" />
         ),
       }}
@@ -57,10 +61,10 @@ const BottomTabScreen = () => (
       name="Activity"
       component={ActivityStackNavigation}
       options={{
-        tabBarLabel: "Message",
-        tabBarColor: "blue",
+        // tabBarLabel: "Message",
+        // tabBarColor: "blue",
         tabBarIcon: () => (
-          <SimpleLineIcons name="envelope" size={24} color="blue" />
+          <AntDesign name="hearto" size={24} color="black" />
         ),
       }}
     />
@@ -68,10 +72,10 @@ const BottomTabScreen = () => (
       name="Profile"
       component={ProfileStackStackNavigation}
       options={{
-        tabBarLabel: "Message",
-        tabBarColor: "blue",
+        // tabBarLabel: "Message",
+        // tabBarColor: "blue",
         tabBarIcon: () => (
-          <SimpleLineIcons name="envelope" size={24} color="blue" />
+          <ProfilePicture size={20} />
         ),
       }}
     />

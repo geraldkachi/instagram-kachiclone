@@ -5,19 +5,26 @@ import datas from "../../data/storedata"
 
 const Stories = () => {
     return (
-        <View style={{flex: 1, overflow: 'hidden'}}>
+        <>
             <FlatList 
             data={datas}
+            keyExtractor={({name}) => name}
             renderItem={({item}) => <Story data={item} />}
-            keyExtractor={(item, index) => item.id}
+            showsHorizontalScrollIndicator={false}
+            horizontal
+            style={styles.stories}
+            // renderItem={({item}) => <Story imageUri={item.imageUri} name={item.name} />}
             // keyExtractor={({name}) => name}
             // orientation
-            horizontal
             />
-        </View>
+        </>
     )
 }
 
 export default Stories
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    stories: {
+        marginBottom: 15
+    }
+})
