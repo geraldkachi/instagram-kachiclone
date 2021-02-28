@@ -50,7 +50,7 @@ const BottomTabScreen = () => (
       name="ReelsStack"
       component={ReelsStackNavigation}
       options={{
-        tabBarLabel: 'none',
+        // tabBarLabel: 'search',
         // tabBarColor: "blue",
         tabBarIcon: () => (
           <MaterialCommunityIcons name="clipboard-play-outline" size={28} color="black" />

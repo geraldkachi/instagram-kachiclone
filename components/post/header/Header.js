@@ -10,7 +10,7 @@ const Header = ({ imageUri, name }) => {
         <ProfilePicture uri={imageUri} size={40} />
         <Text style={styles.name}>{name}</Text>
       </View>
-      <View>
+      <View style={styles.left}>
         <MaterialCommunityIcons name="dots-vertical" size={24} />
       </View>
     </View>
@@ -29,5 +29,10 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     fontWeight: "bold",
     color: "#4f4f4f4",
+    marginLeft: 10
   },
+  left: {
+      justifyContent:'center',
+      alignItems:"center"
+  }
 });

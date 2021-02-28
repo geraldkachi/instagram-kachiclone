@@ -1,5 +1,7 @@
 import React from "react";
 import { StyleSheet, View, FlatList } from "react-native";
+import ReelsPlayList from "../../components/reels/ReelsPlayList";
+import ChatRooms from "../../data/ChatRoom";
 
 
 const Reels = () => {
@@ -8,10 +10,9 @@ const Reels = () => {
       <FlatList
         style={{width: '100%'}}
         data={ChatRooms}
-        renderItem={({ item }) => <ChatListItem chatRoom={item} />}
+        renderItem={({ item }) => <ReelsPlayList chatRoom={item} />}
         keyExtractor={(item) => item.id}
       />
-      
     </View>
   );
 };
@@ -24,6 +25,5 @@ const styles = StyleSheet.create({
     //  width: "100%",
     justifyContent:'center',
     alignItems:'center',
-
   }
 });
