@@ -53,8 +53,8 @@ const BottomTabScreen = () => (
         tabBarLabel: 'none',
         // tabBarColor: "blue",
         tabBarIcon: () => (
-          <MaterialCommunityIcons name="plus-box-outline" size={28} color="black" />
-          // <MaterialCommunityIcons name="plus-box-outline" size={28} color="black" />
+          <MaterialCommunityIcons name="clipboard-play-outline" size={28} color="black" />
+          // <MaterialCommunityIcons name="plus-box-outline  play-box-outline" size={28} color="black" />
           // <Ionicons name="ios-notifications-outline" size={24} color="blue" />
         ),
       }}
@@ -98,7 +98,7 @@ const HomeStackNavigation = () => (
   </HomeStack.Navigator>
 );
 const SearchStackNavigation = () => (
-  <SearchStack.Navigator headerMode={false}>
+  <SearchStack.Navigator>
     <SearchStack.Screen name="Search" component={SearchScreen} />
   </SearchStack.Navigator>
 );

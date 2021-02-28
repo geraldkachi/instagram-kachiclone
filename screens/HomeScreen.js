@@ -8,24 +8,24 @@ import BottomTabScreen from "./bottomtabs/BottomTabScreen";
 // import Colors from "../constants/Colors";
 // ChatRoomS
 // import ChatRoomScreen from "../screens/ChatRoomScreen";
-BottomTabScreen
+BottomTabScreen;
 
 const HomeStack = createStackNavigator();
 
 const HomeScreen = () => {
   return (
     <>
-    <StatusBar barStyle="dark-content" />
-    <HomeStack.Navigator 
-    // headerMode={false}
-    headerShown={true}
-    >
-      <HomeStack.Screen
-        name="TopTab"
-        component={BottomTabScreen}
-        options= {{headerShown: false}}
-      />
-    </HomeStack.Navigator>
+      <StatusBar barStyle="dark-content" />
+      <HomeStack.Navigator
+        // headerMode={false}
+        headerShown={true}
+      >
+        <HomeStack.Screen
+          name="TopTab"
+          component={BottomTabScreen}
+          options={{ headerShown: false }}
+        />
+      </HomeStack.Navigator>
     </>
   );
 };
@@ -36,7 +36,6 @@ const styles = StyleSheet.create({});
 
 //   <HomeStack.Screen name="BottomTab" component={BottomTabScreen} />
 // <HomeStack.Screen name="Setting" component={SettingScreen} />
-
 
 // <HomeStack.Navigator headerMode={false}>
 // <HomeStack.Screen
@@ -54,18 +53,10 @@ const styles = StyleSheet.create({});
 //   }, 100);
 // }, []);
 
-
-
-
-
-
-
-
-
 // <HomeStack.Navigator headerMode={false}>
 // </HomeStack.Navigator><HomeStack.Screen
-  // name="TopTab"
-  // component={TopTabScreen}
-  // options= {{headerShown: false}}
+// name="TopTab"
+// component={TopTabScreen}
+// options= {{headerShown: false}}
 // />
 // </HomeStack.Navigator>
