@@ -1,16 +1,16 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
-ProfilePicture
+import datas from "../../data/storedata"
 
 import {
-  Entypo,
+  // Entypo,
+  // SimpleLineIcons,
+  // MaterialIcons,
+  // Octicons,
   Ionicons,
   Foundation,
-  SimpleLineIcons,
-  MaterialIcons,
-  Octicons,
   AntDesign,
   MaterialCommunityIcons,
 } from "@expo/vector-icons";
@@ -25,11 +25,13 @@ import ProfilePicture from "../../components/profilepicture/ProfilePicture";
 const Tab = createBottomTabNavigator();
 
 const BottomTabScreen = () => (
-  <Tab.Navigator>
+  // <Tab.Navigator tabBarOptions={{showLabel: false}}>
+  <Tab.Navigator tabBarOptions={{showLabel: false}}>
     <Tab.Screen
       name="HomeStack"
       component={HomeStackNavigation}
       options={{
+        showLabel: false,
         // tabBarLabel: "Home",
         // tabBarColor: "blue",
         tabBarIcon: () => <Foundation name="home" size={24} color="black" />,
@@ -75,7 +77,7 @@ const BottomTabScreen = () => (
         // tabBarLabel: "Message",
         // tabBarColor: "blue",
         tabBarIcon: () => (
-          <ProfilePicture size={20} />
+          <ProfilePicture uri={datas[0].imageUri} size={20} />
         ),
       }}
     />

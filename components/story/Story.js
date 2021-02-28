@@ -3,8 +3,8 @@ import { StyleSheet, Text, View } from "react-native";
 import ProfilePicture from "../profilepicture/ProfilePicture";
 // import data from "../../data/storedata"
 
-const Story = ({ imageUri, name  }) => {
-
+const Story = ({ data }) => {
+  const { imageUri, name } = data;
   return (
     <View>
       <ProfilePicture uri={imageUri} />
@@ -22,3 +22,5 @@ const styles = StyleSheet.create({
 });
 
 // react native video
+// <ProfilePicture uri={data[5].imageUri} />
+//<Text style={styles.name}>{data[0].name}</Text>

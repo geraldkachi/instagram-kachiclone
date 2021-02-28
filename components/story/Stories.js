@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View, FlatList } from 'react-native'
+import { StyleSheet, FlatList } from 'react-native'
 import Story from './Story';
 import datas from "../../data/storedata"
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, StatusBar } from "react-native";
+import { StyleSheet, StatusBar } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
 import BottomTabScreen from "./bottomtabs/BottomTabScreen";
 // import SettingScreen from "../screens/SettingScreen";
@@ -14,13 +14,19 @@ const HomeStack = createStackNavigator();
 
 const HomeScreen = () => {
   return (
-    <HomeStack.Navigator headerMode={false}>
+    <>
+    <StatusBar barStyle="dark-content" />
+    <HomeStack.Navigator 
+    // headerMode={false}
+    headerShown={true}
+    >
       <HomeStack.Screen
         name="TopTab"
         component={BottomTabScreen}
         options= {{headerShown: false}}
       />
     </HomeStack.Navigator>
+    </>
   );
 };
 
@@ -30,6 +36,15 @@ const styles = StyleSheet.create({});
 
 //   <HomeStack.Screen name="BottomTab" component={BottomTabScreen} />
 // <HomeStack.Screen name="Setting" component={SettingScreen} />
+
+
+// <HomeStack.Navigator headerMode={false}>
+// <HomeStack.Screen
+//  name="TopTab"
+// component={BottomTabScreen}
+// options= {{headerShown: false}}
+// />
+// </HomeStack.Navigator>
 
 // const [] = React.useState
 

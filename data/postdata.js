@@ -18,7 +18,7 @@ const post = [
       name: "Ikoojo",
     },
 
-    imageUrl: "https://i.ibb.co/KmSkMbH/striped-sweater.png",
+    imageUri: "https://i.ibb.co/KmSkMbH/striped-sweater.png",
     likesCount: 534,
     caption: "Beautify city of imo #instagram",
     postedAt: "15 minutes ago",
